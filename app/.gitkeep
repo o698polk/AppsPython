@@ -1,0 +1,3 @@
+# Directorio Base de la Aplicación
+
+Este directorio contiene el código fuente final de la aplicación. Todo el desarrollo técnico y los despliegues de frameworks se realizarán aquí, separando la lógica de negocio de la capa de orquestación de la IA (`spec/` y `skill/`).
