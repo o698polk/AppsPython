@@ -20,3 +20,24 @@ def get_productos(db:Session,skip: int=0,limit:int=100):
 # Obtener un solo registro por id
 def get_producto(db:Session, producto_id:int):
   return db.query(models.Producto).filter(models.Producto.id==producto_id).first()
+# Actualizar un producto
+def actualizar_producto(db:Session, producto_id:int, producto:schemas.ProductoUpdate):
+  db_producto=get_producto(db,producto_id=producto_id)
+  if db_producto is None:
+    return None
+  db_producto.nombre=producto.nombre
+  db_producto.descripcion=producto.descripcion
+  db_producto.precio=producto.precio
+  db_producto.cantidad=producto.cantidad
+  db.commit()
+  db.refresh(db_producto)
+  return db_producto
+
+# Eliminar un producto
+def eliminar_producto(db:Session, producto_id:int):
+  db_producto=get_producto(db,producto_id=producto_id)
+  if db_producto is None:
+    return None
+  db.delete(db_producto)
+  db.commit()
+  return db_producto
