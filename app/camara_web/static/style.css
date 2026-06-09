@@ -1,0 +1,10 @@
+.video-container {
+    height: 60vh;
+    min-height: 300px;
+    max-height: 600px;
+    border: 2px solid #444;
+}
+
+video {
+    background-color: #000;
+}

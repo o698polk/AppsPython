@@ -1,0 +1,38 @@
+/* 
+ * Archivo: style.css
+ * Propósito: Añadir estilos visuales adicionales a los proporcionados por Bootstrap 5.
+ */
+
+body {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.table th {
+    background-color: #e9ecef;
+}
+
+/* Efecto hover suave en las filas de la tabla */
+.table-hover tbody tr:hover {
+    background-color: #f1f3f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Animación sutil para los botones */
+.btn {
+    transition: transform 0.1s ease-in-out;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
